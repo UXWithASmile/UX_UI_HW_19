@@ -39,6 +39,7 @@ ul > li {
 section {
   background: #f5f5f5;
   padding: 8.1% 0;
+  display: flex;
 }
 .hero {
   background-color: white;
@@ -68,4 +69,27 @@ section {
   background-color: black;
   padding: 17px;
   color: #fff;
+}
+.arrow {
+  width: 100px;
+  display: none;
+  position: absolute;
+  right: -100%;
+}
+.button-arrow-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.arrow.active {
+  display: block;
+  animation: slide-right 2s infinite ease-in-out;
+}
+@keyframes slide-right {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: -60%;
+  }
 }
