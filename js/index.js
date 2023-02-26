@@ -1,5 +1,11 @@
 console.log("Your index.js file is loaded correctly!");
-
-$("section").on("click", function () {
-  console.log("You clicked on the section");
+$(document).ready(function () {
+  $("section").hover(
+    function () {
+      $("img.arrow").addClass("active");
+    },
+    function () {
+      $("img.arrow").removeClass("active");
+    }
+  );
 });
